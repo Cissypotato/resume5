@@ -24,7 +24,7 @@ img{width: 100%}/*防止图片超出父元素*/
 .blogAndGithub>a{padding: 0 20px;line-height:33px;color: #ccc;font-size: 14px;}
 a.downloadResume{display: inline-block;font-size: 12px;
     padding: 2px 12px;transition: box-shadow 0.8s; }
-.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
+a.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
 
 
 .about{display: flex;flex-direction: column;justify-content: center;align-items: center;color: #ddd;margin-top: 20px;}
@@ -32,7 +32,11 @@ a.downloadResume{display: inline-block;font-size: 12px;
 .avatarWrapper>.avatar{width: 150px;height: 150px;border: 3px solid #fff;border-radius: 50%;
     background: url(/img/avatar.jpg) center center no-repeat;background-size: cover;box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65) ;}
 .about>h3{margin-top:40px;font-size: 40px;font-weight: 500;margin-bottom: 20px;}
-.abItem{padding: 5px 10px ;background: rgba(255,255,255,0.1);margin-top: 8px;width: 40%;text-align: center}
+.abItem{padding: 5px 10px ;background: rgba(255,255,255,0.1);margin-top: 8px;width: 40%;text-align: center;
+    display: flex;align-items: center;justify-content: center}
+.abItem>div{margin: 0 auto;width: 50%;}
+.abItem>svg.icon{margin-right: 10px;width: 20px;height: 20px;}
+.abItem>svg.occupation{fill:#fff;color: #fff;}
 
 
 
@@ -56,10 +60,44 @@ section.skills,.portfolio,.message{max-width: 940px;margin-left: auto;margin-rig
 .skills>ul>li>.bar>.progressBar.bar4{width: 40%}
 
 /* page3 */
-.page3 { background:url(../img/bg3.jpg) no-repeat;background-position: center center;background-size: cover}
+.page3 { background:url(../img/bg5.jpg) no-repeat;background-position: center center;background-size: cover}
+
+.portfolio{text-align: center;}
+.portfolio>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
+.portfolio>nav{display: inline-block;vertical-align: top;margin-top: 32px;}
+.portfolio>nav>ol>li{float: left;margin-left: 30px;cursor: pointer;}
+.portfolio>nav>ol>li:first-child{margin-left: 0;}
+.portfolio>nav>.bar{height: 5px;border-radius: 2px;background: #fff;margin-top: 5px;}
+
+.portfolio>.items{width: 100%;display: flex;flex-wrap: wrap;justify-content: space-between;margin-top: 50px;}
+.items>.item{width: 420px;height:100px;margin-top: 20px;display: flex;
+  padding:10px 5px;box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3); }
+.item>.description{width: 70%;display: flex;flex-direction: column;justify-content: center}
+.item>.description>h3{font-size: 14px;color: #fff;text-align: start;margin-left: 5px;}
+.item>.description>p{font-size: 12px;color: #ccc;text-align: start;margin-left: 5px;margin-top: 5px;}
+.item>.description>p>a{color: #ccc}
+.item>.itemPic{width: 30%;}
 
 /* page4 */
+
 .page4 { background:url(../img/bg4.jpg) no-repeat;background-position: center center;background-size: cover}
+.experience>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
+
+/*message*/
+.message{margin-bottom: 100px}
+.message>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
+.message>ol{max-width: 800px;margin: 0 auto;}
+.message>ol>li{padding-top: 16px;padding-bottom: 3px;padding-left: 16px;;border-bottom: 1px solid  rgb(82, 3, 26);color: #ccc}
+input.name{background: none;border: none;border-bottom: 1px solid #ccc;margin-right: 100px;}
+input.name:focus{outline: none;background-color: none;}
+input.content{background: none;border: none;border-bottom: 1px solid #ccc;margin-right: 100px;}
+input.content:focus{outline: none;background-color: none;}
+button.submit{color: #ddd;background:rgba(255, 255, 255,0.1);border: none;padding: 4px 8px;cursor: pointer;border-radius: 2px;}
+
+
+/*footer*/
+footer>p{text-align: center;color: rgb(82, 3, 26);margin: 20px;font-size: 14px;}
+
 
 
 
@@ -121,42 +159,10 @@ nav.sticky{position: fixed;width: 100%;top:0;left:0;background:#4d608b;box-shado
 /* section.skills.offset .progressBar{transform: translateX(-100%)} */
 
 /* portfolio */
-.portfolio{text-align: center;}
-.portfolio>h2{text-align: center;color: #3d4451;font-size: 34px;font-weight: 300;}
-.portfolio>nav{display: inline-block;vertical-align: top;margin-top: 32px;}
-.portfolio>nav>ol>li{float: left;margin-left: 30px;cursor: pointer;}
-.portfolio>nav>ol>li:first-child{margin-left: 0;}
-.portfolio>nav>.bar{height: 5px;border-radius: 2px;background: #fff;margin-top: 5px;}
-
-.portfolio>nav>.bar.state-1 .bar-inner{height: 100%;border-radius: 2px;background: #4d608b;width: 15%;}
-.portfolio>nav>.bar.state-2 .bar-inner{height: 100%;border-radius: 2px;background: #4d608b;width: 16%;margin-left: 29%}
-.portfolio>nav>.bar.state-3 .bar-inner{height: 100%;border-radius: 2px;background: #4d608b;width: 42%;margin-left: 58%}
-
-.portfolio>.items{width: 100%;display: flex;flex-wrap: wrap;justify-content: space-between;margin-top: 50px;}
-.items>.item{width: 420px;height:100px;margin-top: 20px;display: flex;background: #fff;
-  padding:10px 5px;box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3); }
-.item>.description{width: 70%;display: flex;flex-direction: column;justify-content: center}
-.item>.description>h3{font-size: 14px;color: #364463;text-align: start;margin-left: 5px;}
-.item>.description>p{font-size: 12px;color: #777;text-align: start;margin-left: 5px;margin-top: 5px;}
-.item>.description>p>a{color: #777}
-.item>.itemPic{width: 30%;}
-.item>.itemPic>img{}
 
 
-/*message*/
-.message{margin-bottom: 100px}
-.message>h2{text-align: center;color: #3d4451;font-size: 34px;font-weight: 300;}
-.message>ol{max-width: 800px;margin: 0 auto;}
-.message>ol>li{padding-top: 16px;padding-bottom: 3px;padding-left: 16px;;border-bottom: 1px solid #ddd;color: #666}
-input.name{background: none;border: none;border-bottom: 1px solid #999;margin-right: 100px;}
-input.name:focus{outline: none;background-color: none;}
-input.content{background: none;border: none;border-bottom: 1px solid #999;margin-right: 100px;}
-input.content:focus{outline: none;background-color: none;}
-button.submit{color: #ddd;background: #4d608b;border: none;padding: 4px 8px;cursor: pointer;border-radius: 2px;}
 
 
-/*footer*/
-footer>p{text-align: center;color: gray;margin: 20px;font-size: 14px;}
 
 
 
