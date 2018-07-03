@@ -36,7 +36,7 @@ a.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
     display: flex;align-items: center;justify-content: center}
 .abItem>div{margin: 0 auto;width: 50%;}
 .abItem>svg.icon{margin-right: 10px;width: 20px;height: 20px;}
-.abItem>svg.occupation{fill:#fff;color: #fff;}
+.abItem>svg.icon.occupation{width: 22px;height: 22px;fill: #eee}
 
 
 
@@ -44,17 +44,19 @@ a.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
 .page2 { background:url(../img/bg3.jpg) no-repeat;background-position: center center;background-size: cover}
 
 .skills{margin-top: 50px;}
-section.skills,.portfolio,.message{max-width: 940px;margin-left: auto;margin-right: auto;padding-top: 60px;}
+section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;padding-top: 60px;}
 .skills>h2{text-align: center;color: #fff;font-size: 34px;font-weight: 300;}
+
 .skills>ul{box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);padding: 42px 50px 10px;background: rgba(255, 255, 255, 0.1);
     margin-top: 30px;margin-top: 50px;}
 .skills>ul>li{width: 47%;float: left;box-sizing: border-box;color: #ddd; }
 .skills>ul>li>h3{font-size: 16px;color: #ccc;}
+.skills>ul>li>h3>span{margin: 0 4px;}
 .skills>ul>li>p{font-size: 12px;color: #eee;margin: 8px 0;}
 .skills>ul>li:nth-child(even) {float: right;}
 .skills>ul>li>h3{font-size: 14px;}
 .skills>ul>li>.bar{background: #ced4e3;height: 5px;border-radius: 2px;margin: 6px 0 40px;overflow: hidden}
-.skills>ul>li>.bar>.progressBar{height: 100%; width: 70%;background:#4d608b;border-radius: 2px;transition: all 1s;}
+.skills>ul>li>.bar>.progressBar{height: 100%; width: 70%;background:#0adfd4;border-radius: 2px;transition: all 1s;}
 .skills>ul>li>.bar>.progressBar.bar1{width: 80%}
 .skills>ul>li>.bar>.progressBar.bar3{width: 60%}
 .skills>ul>li>.bar>.progressBar.bar4{width: 40%}
@@ -72,25 +74,32 @@ section.skills,.portfolio,.message{max-width: 940px;margin-left: auto;margin-rig
 .portfolio>.items{width: 100%;display: flex;flex-wrap: wrap;justify-content: space-between;margin-top: 50px;}
 .items>.item{width: 420px;height:100px;margin-top: 20px;display: flex;
   padding:10px 5px;box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3); }
-.item>.description{width: 70%;display: flex;flex-direction: column;justify-content: center}
+.item>.description{width: 100%;display: flex;flex-direction: column;justify-content: center}
 .item>.description>h3{font-size: 14px;color: #fff;text-align: start;margin-left: 5px;}
 .item>.description>p{font-size: 12px;color: #ccc;text-align: start;margin-left: 5px;margin-top: 5px;}
-.item>.description>p>a{color: #ccc}
-.item>.itemPic{width: 30%;}
+.item>.description>p>a{color: #eee;margin-left: 4px;}
+
 
 /* page4 */
 
 .page4 { background:url(../img/bg4.jpg) no-repeat;background-position: center center;background-size: cover}
-.experience>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
 
+
+.experience{margin-top: 160px;display: flex;justify-content: center;width: 80%;}
+.experience>h2{text-align: center;color: #ddd;font-size: 20px;font-weight: 300;width: 30%;margin-top: 10px;}
+.experience>div{width:70%}
+.experience>div>p{margin-top: 10px;background: rgba(255,255,255,0.1);padding: 4px 8px;color: #ddd}
+.experience>div>p>span.time{width: 30%;display: inline-block}
 /*message*/
-.message{margin-bottom: 100px}
-.message>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
-.message>ol{max-width: 800px;margin: 0 auto;}
-.message>ol>li{padding-top: 16px;padding-bottom: 3px;padding-left: 16px;;border-bottom: 1px solid  rgb(82, 3, 26);color: #ccc}
-input.name{background: none;border: none;border-bottom: 1px solid #ccc;margin-right: 100px;}
+.message{margin-top: 100px;display: flex;width: 80%;}
+.message>h2{text-align: center;color: #ddd;font-size: 20px;font-weight: 300;width: 30%}
+.message>div{width:70%}
+.message>div>ol{background: rgba(255,255,255,0.1);padding: 20px 30px;}
+.message>div>ol>li{padding-top: 16px;padding-bottom: 3px;padding-left: 16px;;border-bottom: 1px solid  rgb(82, 3, 26);color: #ccc}
+.message>div>form>label{color: rgb(44, 2, 14)}
+input.name{background: none;border: none;border-bottom: 1px solid rgb(82, 3, 26);margin-right: 100px;}
 input.name:focus{outline: none;background-color: none;}
-input.content{background: none;border: none;border-bottom: 1px solid #ccc;margin-right: 100px;}
+input.content{background: none;border: none;border-bottom: 1px solid rgb(82, 3, 26);margin-right: 100px;}
 input.content:focus{outline: none;background-color: none;}
 button.submit{color: #ddd;background:rgba(255, 255, 255,0.1);border: none;padding: 4px 8px;cursor: pointer;border-radius: 2px;}
 
@@ -141,15 +150,7 @@ span.time{margin-right: 16px;}
 
 
 /*nav*/
-nav{transition: all 0.5s}
-nav.sticky{position: fixed;width: 100%;top:0;left:0;background:#4d608b;box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3); }
-.footer{background:#4d608b;text-align: center;width: 940px;margin-left: auto;margin-right: auto;
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);}
-.footer>.nav{display: flex;justify-content: space-between}
-.footer>.nav>li{margin: 0 17px;position: relative}
-.footer>.nav>li a{font-size: 12px;display: block;line-height: 50px;
-    font-weight: 700;color: #ddd;position: relative;width: 50px;height: 50px;border-radius: 50%;}
-.footer>.nav>li a:hover{background: #364463;}
+
 
 /* skills */
 

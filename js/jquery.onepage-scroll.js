@@ -25,7 +25,7 @@
     keyboard: true,
     beforeMove: null,
     afterMove: null,
-    loop: true,
+    loop: false,
     responsiveFallback: false,
     direction : 'vertical'
 	};
