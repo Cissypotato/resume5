@@ -34,8 +34,7 @@
         form:null,
         init:function(view,model){
             this.view=view
-            this.model=model
-            
+            this.model=model   
             this.messageList=view.querySelector('#messageList')
             this.form=view.querySelector('#postMessageForm')
             this.model.init()
@@ -51,8 +50,7 @@
                            this.messageList.appendChild(li);
                         })    
                     },
-                //     function (error) {
-                //         alert('欧气不足，提交失败')}
+                
                 )
                 // .then(()=>{},(error)=>{
                 //     console.log(error)
@@ -62,6 +60,7 @@
             this.form.addEventListener('submit',(e)=>{
                 e.preventDefault();
                 this.saveMessage()
+                // this.loadMessages()
             })
             
         },
@@ -81,6 +80,10 @@
         }
     }
     controller.init(view,model);
+
+    // $('.submit').click([name,content],function(){
+
+    // })
 }.call()
 
 
