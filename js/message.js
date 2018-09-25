@@ -44,11 +44,24 @@
         loadMessages:function(){            
             this.model.fetch().then( (messages) => {
                         let array=messages.map((item)=>item.attributes)
-                        array.forEach((item)=>{
-                            let li=document.createElement('li')
-                            li.innerText=`${item.name}:${item.content}`;
-                           this.messageList.appendChild(li);
-                        })    
+                        if(this.messageList.hasChildNodes()){
+                            var children=this.messageList.childNodes;  
+                            for(var i=children.length-1;i>=0;i--){  
+                                this.messageList.removeChild(children.item(i));  
+                            } 
+                            array.forEach((item)=>{
+                                let li=document.createElement('li')
+                                li.innerText=`${item.name}:${item.content}`;
+                               this.messageList.appendChild(li);
+                            }) 
+                        }else{
+                            array.forEach((item)=>{
+                                let li=document.createElement('li')
+                                li.innerText=`${item.name}:${item.content}`;
+                               this.messageList.appendChild(li);
+                            }) 
+                        }
+                           
                     },
                 
                 )
@@ -60,7 +73,8 @@
             this.form.addEventListener('submit',(e)=>{
                 e.preventDefault();
                 this.saveMessage()
-                // this.loadMessages()
+                this.loadMessages()
+               
             })
             
         },
@@ -68,14 +82,15 @@
             let myForm=this.form                
             let content=myForm.querySelector('input[name=content]').value;
             let name=myForm.querySelector('input[name=name]').value;
-            this.model.save(name,content).then(function(object){
-                let li=document.createElement('li')
-                li.innerText=`${object.attributes.name}:${object.attributes.content}`;
-                let messageList=document.querySelector('#messageList')
-                messageList.appendChild(li);
-                myForm.querySelector('input[name=content]').value=""
-                myForm.querySelector('input[name=name]').value=""
-            })
+            this.model.save(name,content)
+            //  .then(function(object){
+            //     let li=document.createElement('li')
+            //     li.innerText=`${object.attributes.name}:${object.attributes.content}`;
+            //     let messageList=document.querySelector('#messageList')
+            //     messageList.appendChild(li);
+            //     myForm.querySelector('input[name=content]').value=""
+            //     myForm.querySelector('input[name=name]').value=""
+            // })
             
         }
     }
@@ -104,7 +119,8 @@
 
 //
 
-
+// var xhr=new XMLHttpRequest()
+// xhr.open()
 
 
 
