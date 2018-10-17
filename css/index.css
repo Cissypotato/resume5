@@ -41,7 +41,7 @@ a.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
 
 
 /* page2 */
-.page2 { background:url(../img/bg3.jpg) no-repeat;background-position: center center;background-size: cover}
+.page2 { background:url(http://pfm1907bi.bkt.clouddn.com/bg3.jpg) no-repeat;background-position: center center;background-size: cover}
 
 .skills{margin-top: 50px;}
 section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;padding-top: 60px;}
@@ -62,7 +62,7 @@ section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;
 .skills>ul>li>.bar>.progressBar.bar4{width: 40%}
 
 /* page3 */
-.page3 { background:url(../img/bg5.jpg) no-repeat;background-position: center center;background-size: cover}
+.page3 { background:url(http://pfm1907bi.bkt.clouddn.com/bg5.jpg) no-repeat;background-position: center center;background-size: cover}
 
 .portfolio{text-align: center;}
 .portfolio>h2{text-align: center;color: #ddd;font-size: 34px;font-weight: 300;}
@@ -82,7 +82,7 @@ section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;
 
 /* page4 */
 
-.page4 { background:url(../img/bg4.jpg) no-repeat;background-position: center center;background-size: cover}
+.page4 { background:url(http://pfm1907bi.bkt.clouddn.com/bg4.jpg) no-repeat;background-position: center center;background-size: cover}
 
 
 .experience{margin-top: 160px;display: flex;justify-content: center;width: 80%;}
