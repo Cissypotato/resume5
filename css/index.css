@@ -30,7 +30,7 @@ a.downloadResume:hover{box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65);}
 .about{display: flex;flex-direction: column;justify-content: center;align-items: center;color: #ddd;margin-top: 20px;}
 .avatarWrapper{display: flex;justify-content: center;align-items:top;flex-direction: column;align-items: center;}
 .avatarWrapper>.avatar{width: 150px;height: 150px;border: 3px solid #fff;border-radius: 50%;
-    background: url(../img/avatar5.jpg) center center no-repeat;background-size: cover;box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65) ;}
+    background: url(http://pfm1907bi.bkt.clouddn.com/avatar5.jpg) center center no-repeat;background-size: cover;box-shadow: 0px 7px 16px 0px rgba(77,96,139,0.65) ;}
 .about>h3{margin-top:40px;font-size: 40px;font-weight: 500;margin-bottom: 20px;}
 .abItem{padding: 5px 10px ;background: rgba(255,255,255,0.1);margin-top: 8px;width: 40%;text-align: center;
     display: flex;align-items: center;justify-content: center}
