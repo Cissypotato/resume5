@@ -7,6 +7,11 @@
             var APP_ID = 'ccFrNOWfVvznB3jVaAR3D9LS-gzGzoHsz';
             var APP_KEY = 'bJNJepBXn0L3lssSqv03zgaE';
             AV.init({appId: APP_ID,appKey: APP_KEY});
+            // let initMssage={
+            //     Tom:'233',
+            //     May:'666'
+            // }
+            // localStorage.setItem('message', JSON.stringify(initMssage));
         },
         fetch:function(){
             var query = new AV.Query('Message');
@@ -15,6 +20,7 @@
             query.limit(3);
             query.descending('createdAt');
             return query.find()//promise对象
+            // let cat = localStorage.getItem('message');
         },
         //创建数据
         save:function(name,content){
@@ -24,6 +30,7 @@
                 content:content,
                 name:name
             })//promise对象
+
         }
     }//跟数据有关的用model
 
