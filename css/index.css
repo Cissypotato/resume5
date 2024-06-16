@@ -58,7 +58,8 @@ section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;
 .skills>ul>li>.bar{background: #ced4e3;height: 5px;border-radius: 2px;margin: 6px 0 40px;overflow: hidden}
 .skills>ul>li>.bar>.progressBar{height: 100%; width: 70%;background:#0adfd4;border-radius: 2px;transition: all 1s;}
 .skills>ul>li>.bar>.progressBar.bar1{width: 80%}
-.skills>ul>li>.bar>.progressBar.bar3{width: 80%}
+.skills>ul>li>.bar>.progressBar.bar2{width: 90%}
+.skills>ul>li>.bar>.progressBar.bar3{width: 90%}
 .skills>ul>li>.bar>.progressBar.bar4{width: 40%}
 
 /* page3 */
@@ -83,7 +84,7 @@ section.skills,.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;
 
 /* page4 */
 
-.page4 { background:url(../img/bg4.jpg) no-repeat;background-position: center center;background-size: cover}
+.page4 { background:url(../img/bg4.jpg) no-repeat;background-position: center center;background-size: cover;position: relative;}
 
 
 .experience{margin-top: 100px;display: flex;justify-content: center;width: 80%;}
@@ -108,6 +109,14 @@ button.submit{color: #ddd;background:rgba(255, 255, 255,0.1);border: none;paddin
 
 
 /*footer*/
+
+footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 10;
+    /* background-color: #fff; */
+}
 footer>p{text-align: center;color: rgb(82, 3, 26);margin: 20px;font-size: 14px;}
 
 
@@ -148,7 +157,6 @@ main{transition: all 0.3s;position: relative}
 span.time{margin-right: 16px;}
 
 .lineSplit{border-left: 1px solid #4d608b;border-right: 1px solid #4d608b;margin-left: 20px;margin-right: 20px;width: 5px;}
-
 
 
 
